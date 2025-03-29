@@ -13,7 +13,7 @@ class Hangman:
         elif type(words) is list:
             self.words += words
         else:
-            raise 'Incorrect type of words: ' + type(words) 
+            raise 'Incorrect type of words: ' + type(words)
 
     def play(self):
         inputed_letters = []
@@ -23,7 +23,7 @@ class Hangman:
 
         print('The game start')
         print(f'Guess the {len(word)} letter word')
-        
+
         while mistakes_counter <= self.mistakes:
             for char in word:
                 if char in inputed_letters:
@@ -31,7 +31,6 @@ class Hangman:
                 else:
                     print('_', end='')
             print()
-
 
             letter = input('Input a letter: ')
             if letter not in word:
